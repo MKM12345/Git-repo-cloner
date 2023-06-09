@@ -29,3 +29,42 @@ Contributions are welcome! If you find any issues or have suggestions for improv
 
 This project is licensed under the [MIT License](LICENSE).
 
+## Alternative
+
+If this doesn't work, just use the below (It will definitely work, only one file requires):
+
+```
+#include <iostream>
+#include <cstdlib>
+
+int main() {
+    std::cout << "GitHub Repository Cloner" << std::endl;
+
+    // Retrieve repository URL from user
+    std::string repositoryUrl;
+    std::cout << "Enter the URL of the GitHub repository: ";
+    std::getline(std::cin, repositoryUrl);
+
+    // Retrieve target directory from user
+    std::string targetDirectory;
+    std::cout << "Enter the target directory (leave empty for current directory): ";
+    std::getline(std::cin, targetDirectory);
+
+    // Construct the git clone command
+    std::string command = "git clone " + repositoryUrl;
+    if (!targetDirectory.empty()) {
+        command += " " + targetDirectory;
+    }
+
+    // Execute the git clone command
+    int result = std::system(command.c_str());
+
+    if (result == 0) {
+        std::cout << "Repository cloned successfully!" << std::endl;
+    } else {
+        std::cerr << "Failed to clone repository." << std::endl;
+    }
+
+    return 0;
+}
+```
