@@ -19,8 +19,7 @@ This is a simple C++ program that allows you to clone GitHub repositories using 
 
 ## Usage
 
-- Ensure that the Git command-line tool is installed and accessible from the command line. Modify the `main.cpp` file with the desired repository URL and local path, then compile and run the program.
-
+- Ensure that the Git command-line tool is installed and accessible from the command line. Give the necessary input.
 ## Contributing
 
 Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
